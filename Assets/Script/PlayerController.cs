@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     //0:left 1:mid 2:right
     private int line = 1;
     public float lineDistance = 4;
+    public float jumpForce;
+    public float gravity;
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -23,6 +26,21 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         dir.z = speed;
+  
+        if(controller.isGrounded)
+        {
+            dir.y = -1;
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                Jump();
+            }
+        }
+        else
+        {
+            dir.y += gravity * Time.deltaTime;
+        }
+
+
 
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
@@ -55,5 +73,10 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         controller.Move(dir * Time.fixedDeltaTime);
+    }
+
+    private void Jump()
+    {
+        dir.y = jumpForce;
     }
 }
