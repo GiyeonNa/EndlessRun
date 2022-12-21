@@ -79,4 +79,12 @@ public class PlayerController : MonoBehaviour
     {
         dir.y = jumpForce;
     }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.transform.tag == "Obstacle")
+        {
+            GameManager.Instance.GameOver();
+        }
+    }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8196736700945115227}
   m_Layer: 0
   m_Name: Tile2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,6 +188,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrafficCone
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 99baca6eae8061e46a8977b637946a8e, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99baca6eae8061e46a8977b637946a8e, type: 3}
 --- !u!4 &1311047220785236182 stripped
@@ -267,6 +271,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 99baca6eae8061e46a8977b637946a8e, type: 3}
       propertyPath: m_Name
       value: TrafficCone (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 99baca6eae8061e46a8977b637946a8e, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99baca6eae8061e46a8977b637946a8e, type: 3}
